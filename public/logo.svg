@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="globeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="trainGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22C55E" />
+      <stop offset="60%" stop-color="#16A34A" />
+      <stop offset="100%" stop-color="#15803D" />
+    </linearGradient>
+    <linearGradient id="busGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F87171" />
+      <stop offset="100%" stop-color="#DC2626" />
+    </linearGradient>
+    <linearGradient id="planeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#B91C1C" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Speed Motion Lines behind train -->
+  <g stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+    <line x1="60" y1="230" x2="110" y2="230" />
+    <line x1="75" y1="240" x2="125" y2="240" />
+    <line x1="90" y1="250" x2="135" y2="250" />
+    <!-- Ground track shadow line -->
+    <line x1="110" y1="254" x2="350" y2="254" stroke="#64748B" stroke-width="3" opacity="0.4" />
+  </g>
+
+  <!-- 1. GLOBE & ORBIT ARROW -->
+  <g transform="translate(160, 40)">
+    <!-- Flight Orbit Arc Back -->
+    <path d="M 0 110 C -25 50 20 -10 90 -10 C 120 -10 150 5 170 25" fill="none" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" opacity="0.85" />
+    
+    <!-- Globe Base Sphere -->
+    <circle cx="85" cy="85" r="70" fill="url(#globeGrad)" />
+    
+    <!-- Globe Continents (Green land masses) -->
+    <g fill="#4ADE80">
+      <!-- North America / Europe -->
+      <path d="M 45 40 Q 65 30 75 45 Q 85 55 75 75 Q 60 70 50 60 Z" />
+      <path d="M 85 30 Q 110 25 125 40 Q 120 60 100 55 Q 90 45 85 30 Z" />
+      <!-- Africa / South Asia -->
+      <path d="M 75 75 Q 105 70 120 90 Q 115 120 85 130 Q 70 115 75 90 Z" />
+      <path d="M 125 80 Q 145 75 150 95 Q 140 115 125 105 Z" />
+    </g>
+
+    <!-- Globe Grid Lines (Lat / Long) -->
+    <path d="M 85 15 C 45 15 45 155 85 155 C 125 155 125 15 85 15" fill="none" stroke="#BAE6FD" stroke-width="1.5" opacity="0.6" />
+    <ellipse cx="85" cy="85" rx="70" ry="25" fill="none" stroke="#BAE6FD" stroke-width="1.5" opacity="0.6" />
+
+    <!-- Flight Orbit Arc Front with Arrow Heads -->
+    <path d="M 170 25 C 160 15 140 0 100 -5 C 40 -10 -15 45 -5 105" fill="none" stroke="#0284C7" stroke-width="4.5" stroke-linecap="round" />
+    <!-- Lower Arrowhead -->
+    <path d="M -5 105 L -12 90 L 5 95 Z" fill="#0284C7" />
+  </g>
+
+  <!-- 2. AIRPLANE -->
+  <g transform="translate(265, 45) rotate(25)" filter="url(#softShadow)">
+    <!-- Red Airplane Body -->
+    <path d="M 0 15 C 15 10 40 8 50 14 C 45 18 20 22 0 15 Z" fill="url(#planeGrad)" />
+    <!-- Wings -->
+    <path d="M 22 12 L 10 -18 L 18 -18 L 32 12 Z" fill="#DC2626" />
+    <path d="M 24 16 L 15 36 L 22 36 L 33 16 Z" fill="#B91C1C" />
+    <!-- Tail Fin -->
+    <path d="M 2 13 L -8 0 L -2 0 L 6 13 Z" fill="#DC2626" />
+    <!-- Cockpit Window -->
+    <path d="M 44 13 Q 48 14 45 16 Z" fill="#FFFFFF" opacity="0.8" />
+  </g>
+
+  <!-- 3. HOTEL BUILDINGS -->
+  <!-- Green Hotel Tower (Back) -->
+  <g transform="translate(305, 130)">
+    <rect x="0" y="0" width="38" height="85" rx="2" fill="#16A34A" />
+    <!-- Windows -->
+    <g fill="#FEF08A" opacity="0.9">
+      <rect x="6" y="8" width="6" height="8" rx="1" />
+      <rect x="16" y="8" width="6" height="8" rx="1" />
+      <rect x="26" y="8" width="6" height="8" rx="1" />
+      <rect x="6" y="22" width="6" height="8" rx="1" />
+      <rect x="16" y="22" width="6" height="8" rx="1" />
+      <rect x="26" y="22" width="6" height="8" rx="1" />
+      <rect x="6" y="36" width="6" height="8" rx="1" />
+      <rect x="16" y="36" width="6" height="8" rx="1" />
+      <rect x="26" y="36" width="6" height="8" rx="1" />
+    </g>
+  </g>
+
+  <!-- Red Hotel Building (Front) -->
+  <g transform="translate(275, 155)">
+    <!-- Hotel Signboard on Roof -->
+    <g transform="translate(6, -18)">
+      <rect x="0" y="0" width="28" height="14" rx="2" fill="#B91C1C" />
+      <text x="14" y="10" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="7" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">HOTEL</text>
+    </g>
+    <!-- Building Body -->
+    <rect x="0" y="0" width="40" height="65" rx="3" fill="#EF4444" stroke="#DC2626" stroke-width="1.5" />
+    <!-- Hotel Windows Grid -->
+    <g fill="#BAE6FD">
+      <rect x="5" y="8" width="6" height="7" rx="1" />
+      <rect x="14" y="8" width="6" height="7" rx="1" />
+      <rect x="23" y="8" width="6" height="7" rx="1" />
+      <rect x="5" y="20" width="6" height="7" rx="1" />
+      <rect x="14" y="20" width="6" height="7" rx="1" />
+      <rect x="23" y="20" width="6" height="7" rx="1" />
+      <rect x="5" y="32" width="6" height="7" rx="1" />
+      <rect x="14" y="32" width="6" height="7" rx="1" />
+      <rect x="23" y="32" width="6" height="7" rx="1" />
+    </g>
+    <!-- Hotel Glass Entrance Door -->
+    <rect x="13" y="46" width="14" height="19" rx="1" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
+  </g>
+
+  <!-- 4. RED BUS -->
+  <g transform="translate(265, 205)">
+    <!-- Bus Main Body -->
+    <rect x="0" y="0" width="92" height="42" rx="6" fill="url(#busGrad)" stroke="#B91C1C" stroke-width="1.5" />
+    <!-- Bus Roof White Top / Highlight -->
+    <path d="M 6 0 L 86 0 Q 92 0 92 6 L 92 10 L 0 10 L 0 6 Q 0 0 6 0 Z" fill="#FFFFFF" opacity="0.25" />
+    
+    <!-- Front Windshield & Windows -->
+    <g fill="#38BDF8" stroke="#FFFFFF" stroke-width="1.2">
+      <rect x="5" y="6" width="16" height="15" rx="2" />
+      <rect x="24" y="6" width="14" height="15" rx="2" />
+      <rect x="41" y="6" width="14" height="15" rx="2" />
+      <rect x="58" y="6" width="14" height="15" rx="2" />
+      <rect x="75" y="6" width="12" height="15" rx="2" />
+    </g>
+
+    <!-- Side Accent Line -->
+    <line x1="2" y1="25" x2="90" y2="25" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8" />
+
+    <!-- Headlight & Tail Light -->
+    <circle cx="88" cy="30" r="3" fill="#FEF08A" />
+    <rect x="1" y="28" width="2" height="5" fill="#FDE047" />
+
+    <!-- Bus Wheels -->
+    <!-- Front Wheel -->
+    <g transform="translate(22, 38)">
+      <circle cx="0" cy="0" r="8" fill="#1E293B" />
+      <circle cx="0" cy="0" r="4.5" fill="#E2E8F0" />
+      <circle cx="0" cy="0" r="2" fill="#1E293B" />
+    </g>
+    <!-- Rear Wheel -->
+    <g transform="translate(74, 38)">
+      <circle cx="0" cy="0" r="8" fill="#1E293B" />
+      <circle cx="0" cy="0" r="4.5" fill="#E2E8F0" />
+      <circle cx="0" cy="0" r="2" fill="#1E293B" />
+    </g>
+  </g>
+
+  <!-- 5. GREEN BULLET TRAIN -->
+  <g transform="translate(95, 175)" filter="url(#softShadow)">
+    <!-- Aerodynamic Locomotive Silhouette -->
+    <!-- Train Body -->
+    <path d="M 0 58 Q 5 45 25 36 Q 55 26 100 25 L 180 25 L 180 68 L 30 68 Q 12 68 0 58 Z" fill="url(#trainGrad)" stroke="#15803D" stroke-width="1.5" />
+    
+    <!-- Aerodynamic Nose Curve Highlight -->
+    <path d="M 0 58 Q 15 48 40 40 Q 80 30 140 28" fill="none" stroke="#86EFAC" stroke-width="2.5" opacity="0.7" />
+
+    <!-- Red Racing Stripe along Train Length -->
+    <path d="M 12 55 Q 40 46 80 44 L 180 44 L 180 48 L 78 48 Q 35 50 12 58 Z" fill="#DC2626" />
+
+    <!-- Driver Cabin Front Windshield -->
+    <path d="M 18 48 Q 28 38 48 35 L 55 35 Q 42 46 32 52 Z" fill="#0F172A" stroke="#22C55E" stroke-width="1" />
+    <path d="M 22 46 Q 30 39 45 37 L 46 38 Q 32 46 25 50 Z" fill="#38BDF8" opacity="0.85" />
+
+    <!-- Passenger Windows Along Train -->
+    <g fill="#0F172A" stroke="#4ADE80" stroke-width="1">
+      <rect x="65" y="32" width="15" height="10" rx="2" />
+      <rect x="85" y="32" width="15" height="10" rx="2" />
+      <rect x="105" y="32" width="15" height="10" rx="2" />
+      <rect x="125" y="32" width="15" height="10" rx="2" />
+      <rect x="145" y="32" width="15" height="10" rx="2" />
+      <rect x="165" y="32" width="13" height="10" rx="2" />
+    </g>
+    <!-- Passenger Window Glass reflections -->
+    <g fill="#38BDF8" opacity="0.75">
+      <rect x="67" y="34" width="11" height="6" rx="1" />
+      <rect x="87" y="34" width="11" height="6" rx="1" />
+      <rect x="107" y="34" width="11" height="6" rx="1" />
+      <rect x="127" y="34" width="11" height="6" rx="1" />
+      <rect x="147" y="34" width="11" height="6" rx="1" />
+      <rect x="167" y="34" width="9" height="6" rx="1" />
+    </g>
+
+    <!-- Train Nose Headlight -->
+    <ellipse cx="6" cy="56" rx="3.5" ry="5" fill="#FEF08A" />
+
+    <!-- Train Lower Chassis / Undercarriage Skirt -->
+    <rect x="25" y="66" width="155" height="5" fill="#14532D" />
+    <!-- Wheels peaking out -->
+    <circle cx="50" cy="72" r="4" fill="#334155" />
+    <circle cx="70" cy="72" r="4" fill="#334155" />
+    <circle cx="120" cy="72" r="4" fill="#334155" />
+    <circle cx="140" cy="72" r="4" fill="#334155" />
+    <circle cx="160" cy="72" r="4" fill="#334155" />
+  </g>
+
+  <!-- 6. OFFICIAL BRAND TYPOGRAPHY: Aazam Travel Agency -->
+  <text 
+    x="250" 
+    y="330" 
+    font-family="'Cabinet Grotesk', 'Plus Jakarta Sans', system-ui, sans-serif" 
+    font-size="36" 
+    font-weight="900" 
+    letter-spacing="-0.5" 
+    fill="#166534" 
+    text-anchor="middle"
+  >
+    Aazam Travel Agency
+  </text>
+</svg>
